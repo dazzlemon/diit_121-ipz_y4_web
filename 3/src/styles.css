@@ -18,6 +18,7 @@ body {
 	margin: 0;
 	display: grid;
 	height: 100vh;
+	grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
 main {
@@ -42,6 +43,7 @@ header, footer {
 	background-color: var(--header-footer-color);
 	width: 100%;
 	box-sizing: border-box;
+	z-index: 1;
 }
 
 #links {
