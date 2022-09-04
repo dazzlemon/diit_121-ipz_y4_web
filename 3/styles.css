@@ -1,0 +1,48 @@
+body {
+	background-color:rgb(74, 74, 74);
+	color:rgb(228, 228, 228);
+	font-size: 22px;
+	font-weight: 600;
+	margin: 0;
+	display: grid;
+	height: 100vh;
+}
+
+main {
+	overflow: scroll;
+}
+
+header, footer {
+	font-weight: 700;
+	background-color: rgb(90, 84, 73);
+	width: 100%;
+}
+
+header {
+	font-size: 64px;
+	text-align: center;
+	padding-bottom: 14px;
+}
+
+main, footer {
+	padding: 8px;
+}
+
+p {
+	margin: 0;
+}
+
+ul, table {
+	margin: 0 0 12px 0;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+img {
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: relative;
+}
