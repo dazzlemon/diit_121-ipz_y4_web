@@ -1,6 +1,18 @@
+:root {
+	--text-color: rgb(228, 228, 228);
+	--bg-color: rgb(74, 74, 74);
+	--header-footer-color: rgb(90, 84, 73);
+}
+
+.lightMode {
+	--text-color: rgb(50, 50, 50);
+	--bg-color: rgb(211, 211, 211);
+	--header-footer-color: rgb(195, 181, 155);
+}
+
 body {
-	background-color:rgb(74, 74, 74);
-	color:rgb(228, 228, 228);
+	background-color: var(--bg-color);
+	color: var(--text-color);
 	font-size: 22px;
 	font-weight: 600;
 	margin: 0;
@@ -12,16 +24,43 @@ main {
 	overflow: scroll;
 }
 
+#theme_toggle {
+	font-size: 64px;
+	background: none;
+	border-color: var(--text-color);
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 12px;
+}
+
+#theme_toggle:hover {
+	cursor: pointer;
+}
+
 header, footer {
 	font-weight: 700;
-	background-color: rgb(90, 84, 73);
+	background-color: var(--header-footer-color);
 	width: 100%;
+	box-sizing: border-box;
+}
+
+#links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 header {
 	font-size: 64px;
 	text-align: center;
 	padding-bottom: 14px;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
 }
 
 main, footer {
