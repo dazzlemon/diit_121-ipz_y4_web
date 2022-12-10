@@ -31,5 +31,5 @@ addEventListener('storage', updateTheme)
 
 const url = 'http://localhost:8080/'
 
-fetch(url)
+fetch(url, {credentials: 'include'})
 	.then(console.log)
