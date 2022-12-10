@@ -25,7 +25,7 @@ main {
 	overflow: scroll;
 }
 
-#theme_toggle {
+#theme_toggle, #reset_counter {
 	font-size: 64px;
 	background: none;
 	border-color: var(--text-color);
@@ -34,7 +34,12 @@ main {
 	border-radius: 12px;
 }
 
-#theme_toggle:hover {
+#reset_counter {
+	font-size: 24px;
+	height: 100%;
+}
+
+#theme_toggle, #reset_counter:hover {
 	cursor: pointer;
 }
 

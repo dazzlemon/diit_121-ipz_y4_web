@@ -9,6 +9,9 @@ if (theme === null && matchMedia?.('(prefers-color-scheme: dark)').matches) {
 const toggle = document.querySelector('#theme_toggle')
 toggle.addEventListener('click', themeSwitch)
 
+const resetCounterButton = document.querySelector('#reset_counter')
+resetCounterButton.addEventListener('click', resetCounter)
+
 updateTheme()
 
 function themeSwitch() {
@@ -27,9 +30,16 @@ function updateTheme() {
 	}
 }
 
+function resetCounter() {
+	fetch('http://localhost:8080/reset', {credentials: 'include'})
+		.then(response => response.text())
+		.then(count => document.querySelector('#visit_counter').innerText = count)
+}
+
 addEventListener('storage', updateTheme)
 
 const url = 'http://localhost:8080/'
 
 fetch(url, {credentials: 'include'})
-	.then(console.log)
+	.then(response => response.text())
+	.then(count => document.querySelector('#visit_counter').innerText = count)
